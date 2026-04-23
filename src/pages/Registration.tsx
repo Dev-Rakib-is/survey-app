@@ -32,7 +32,7 @@ const Registration = () => {
     }
 
     return (
-        <div className="max-w-5xl">
+        <div className="container mx-auto">
             <h1 className="text-black/90 dark:text-white/80 font-semibold ">Create Your Account </h1>
             <form onSubmit={handleSubmit}>
                 <input
@@ -40,7 +40,7 @@ const Registration = () => {
                     placeholder="Name"
                     required
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className=" display: 'block', width: '100%', marginBottom: '10px' "
+                    className=" border-b-2 outline-0 width: '100%', marginBottom: '10px' "
                 />
             </form>
         </div>
