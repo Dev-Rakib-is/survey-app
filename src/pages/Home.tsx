@@ -1,8 +1,10 @@
 
-
+import Hero from "../components/home/hero"
 const Home = () => {
   return (
-    <div className="container mx-auto">Home</div>
+    <div>
+      <Hero/>
+    </div>
   )
 }
 

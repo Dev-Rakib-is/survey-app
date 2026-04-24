@@ -21,8 +21,8 @@ const Footer = () => {
     ]
 
     return (
-        <footer className="bg-linear-to-l fron-lime-200 to-green-100 px-4 md:px-6 lg:px-8">
-            <div className="container mx-auto py-10 flex flex-col lg:flex-row justify-between border-t border-b border-gray-300 gap-10">
+        <footer className="bg-linear-to-l fron-lime-200 to-green-100 px-4 md:px-6 lg:px-8 border-t border-b border-gray-300">
+            <div className="container mx-auto py-10 flex flex-col lg:flex-row justify-between gap-10">
 
                 {/* Left Side (Logo & Social) */}
                 <div className="flex flex-col items-center lg:items-start text-center lg:text-left basis-1/3">

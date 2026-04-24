@@ -23,9 +23,9 @@ const Nav = () => {
     }, [dark]);
 
     return (
-        <div className="bg-linear-to-r fron-lime-200 to-green-100 dark:from-slate-900 dark:to-slate-800 sticky top-0 z-50 shadow-sm">
+        <div className="bg-linear-to-r fron-lime-200 to-green-100 dark:from-slate-900 dark:to-slate-800 sticky top-0 z-50 shadow-sm  border-b dark:border-white/20 border-black/10">
             <div className="container mx-auto px-4 md:px-0">
-                <div className="flex justify-between items-center py-2 border-b dark:border-white/20 border-black/10">
+                <div className="flex justify-between items-center py-2">
 
                     {/* Logo */}
                     <Link to="/" className="z-50">
