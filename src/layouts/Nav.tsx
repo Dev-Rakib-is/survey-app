@@ -11,14 +11,18 @@ const Nav = () => {
         { name: "Contact", link: "/contact" }
     ];
 
-    const [dark, setDark] = useState(false);
+    const [dark, setDark] = useState(() => {
+        return localStorage.getItem('theme') === 'dark'
+    });
     const [isOpen, setIsOpen] = useState(false); // Mobile menu state
 
     useEffect(() => {
         if (dark) {
             document.documentElement.classList.add("dark")
+            localStorage.setItem('theme', 'dark')
         } else {
             document.documentElement.classList.remove('dark')
+            localStorage.setItem('theme', 'light')
         }
     }, [dark]);
 
