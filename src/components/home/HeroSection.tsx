@@ -11,7 +11,7 @@ const Hero = () => {
                 <div className="md:w-1/2 z-10 text-center md:text-left">
                     <motion.span
                         initial={{ opacity: 0, x: -30 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5 }}
                         className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider text-green-700 uppercase bg-green-100 rounded-full dark:bg-green-900/30 dark:text-green-400">
                         Licensed & Professional Surveyors
@@ -19,7 +19,7 @@ const Hero = () => {
 
                     <motion.h1
                         initial={{ opacity: 0, x: -30 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.7 }} className="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white leading-tight">
                         Precision Mapping for <br />
                         <span className="text-green-600">Secure Property</span>
@@ -27,7 +27,7 @@ const Hero = () => {
 
                     <motion.p
                         initial={{ opacity: 0, x: -30 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.9 }}
                         className="mt-6 text-lg text-slate-600 dark:text-slate-400 max-w-xl">
                         জমি বা প্রপার্টির সঠিক মাপজোখ নিশ্চিত করতে আমরা ব্যবহার করি আধুনিক GPS এবং Total Station প্রযুক্তি। নির্ভরযোগ্য সার্ভে রিপোর্টের জন্য আজই আমাদের সাথে যোগাযোগ করুন।
@@ -35,7 +35,7 @@ const Hero = () => {
 
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1.1 }} className="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                         <button className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-green-600/20 active:scale-95 cursor-pointer">
                             Free Consultation <ArrowRight size={20} />
@@ -50,7 +50,7 @@ const Hero = () => {
                     <div className="mt-12 flex gap-8 justify-center md:justify-start border-t border-slate-100 dark:border-slate-800 pt-8">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1.3 }}
                         >
                             <p className="text-2xl font-bold text-slate-900 dark:text-white">10+</p>
@@ -58,7 +58,7 @@ const Hero = () => {
                         </motion.div >
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1.7 }}
                         >
                             <p className="text-2xl font-bold text-slate-900 dark:text-white">500+</p>
@@ -70,20 +70,20 @@ const Hero = () => {
                 {/* Right Side: Image with Decorative Elements */}
                 <motion.div
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5 }} className="md:w-1/2 mt-12 md:mt-0 relative flex justify-center">
                     {/* 360 deg badge*/}
                     <div className="absolute -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full">
                         <motion.img
                             initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.4, ease: easeOut }}
                             className="spin absolute top-1/4 left-1/8" src="/Globe icon.svg" alt="Work Image" /></div>
 
                     <div className="relative">
                         <motion.img
                             initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.4, ease: easeOut }}
                             src="/Rana_vi_2.jpg"
                             alt="Land Surveying Equipment"
@@ -93,7 +93,7 @@ const Hero = () => {
                         {/* Floating Badge */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                             className="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 hidden sm:block">
                             <div className="flex items-center gap-3">
