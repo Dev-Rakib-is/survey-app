@@ -30,7 +30,7 @@ const Hero = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.9 }}
                         className="mt-6 text-lg text-slate-600 dark:text-slate-400 max-w-xl">
-                        জমি বা প্রপার্টির সঠিক মাপজোখ নিশ্চিত করতে আমরা ব্যবহার করি আধুনিক GPS এবং Total Station প্রযুক্তি। নির্ভরযোগ্য সার্ভে রিপোর্টের জন্য আজই আমাদের সাথে যোগাযোগ করুন।
+                        We use modern GPS and Total Station technology to ensure accurate measurements of land or property. Contact us today for reliable survey reports.
                     </motion.p>
 
                     <motion.div

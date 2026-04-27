@@ -21,15 +21,15 @@ const Footer = () => {
     ]
 
     return (
-        <footer className="bg-linear-to-l fron-lime-200 to-green-100 px-4 md:px-6 lg:px-8 border-t border-b border-gray-300">
+        <footer className="bg-linear-to-l fron-lime-200 to-green-100  dark:from-slate-900 dark:to-slate-800 px-4 md:px-6 lg:px-8 border-t border-b border-gray-300 dark:border-white/10 transition-colors duration-300">
             <div className="container mx-auto py-10 flex flex-col lg:flex-row justify-between gap-10">
 
                 {/* Left Side (Logo & Social) */}
                 <div className="flex flex-col items-center lg:items-start text-center lg:text-left basis-1/3">
                     <Link to='/' aria-label="Home">
-                        <img src="/logo.png" alt="company logo" className="w-[100px] h-[100px] md:w-[130px] md:h-[130px]" />
+                        <img src="/logo.png" alt="company logo" className="w-[100px] h-[100px] md:w-[130px] md:h-[130px] dark:brightness-110" />
                     </Link>
-                    <p className="text-base font-medium mt-3 text-gray-800">Land Surveyors & Home Inspectors</p>
+                    <p className="text-base font-medium mt-3 text-gray-800 dark:text-gray-200">Land Surveyors & Home Inspectors</p>
 
                     {/* Social Icons */}
                     <div className="flex gap-4 pt-4">
@@ -37,7 +37,7 @@ const Footer = () => {
                             aria-label="Visit our Facebook profile"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="p-2 bg-white rounded-full shadow-sm text-gray-700 hover:text-blue-700 hover:scale-110 transition-all duration-300">
+                            className="p-2 bg-white dark:bg-slate-700 rounded-full shadow-sm text-gray-700 dark:text-gray-200 hover:text-blue-700 dark:hover:text-blue-400 hover:scale-110 transition-all duration-300">
                             <FaFacebookF size={20} />
                         </a>
                     </div>
@@ -48,11 +48,11 @@ const Footer = () => {
 
                     {/* Services */}
                     <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
-                        <h5 className="font-bold pb-3 mb-3 border-b-2 border-green-600 sm:border-none uppercase text-sm tracking-wider">Services</h5>
+                        <h5 className="font-bold pb-3 mb-3 border-b-2 border-green-600 sm:border-none uppercase text-sm tracking-wider text-gray-900 dark:text-white">Services</h5>
                         <ul className="flex flex-col gap-3">
                             {services.map((item, index) => (
-                                <li>
-                                    <Link to={item.link} key={index} className="relative group w-fit text-sm text-gray-700 hover:text-green-700 transition-colors duration-300">
+                                <li key={index}>
+                                    <Link to={item.link} className="relative group w-fit text-sm text-gray-700 dark:text-gray-400 hover:text-green-700 dark:hover:text-green-400 transition-colors duration-300">
                                         {item.name}
                                         <span className="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-green-600 transition-all duration-300 group-hover:w-full"></span>
                                     </Link>
@@ -63,26 +63,28 @@ const Footer = () => {
 
                     {/* Navigation */}
                     <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
-                        <h5 className="font-bold pb-3 mb-3 border-b-2 border-green-600 sm:border-none uppercase text-sm tracking-wider">Navigation</h5>
+                        <h5 className="font-bold pb-3 mb-3 border-b-2 border-green-600 sm:border-none uppercase text-sm tracking-wider text-gray-900 dark:text-white">Navigation</h5>
                         <ul className="flex flex-col gap-3">
                             {navigation.map((item, index) => (
-                                <Link to={item.link} key={index} className="relative group w-fit text-sm text-gray-700 hover:text-green-700 transition-colors duration-300">
-                                    {item.name}
-                                    <span className="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-green-600 transition-all duration-300 group-hover:w-full"></span>
-                                </Link>
+                                <li key={index}>
+                                    <Link to={item.link} className="relative group w-fit text-sm text-gray-700 dark:text-gray-400 hover:text-green-700 dark:hover:text-green-400 transition-colors duration-300">
+                                        {item.name}
+                                        <span className="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-green-600 transition-all duration-300 group-hover:w-full"></span>
+                                    </Link>
+                                </li>
                             ))}
                         </ul>
                     </div>
 
                     {/* Contact */}
                     <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
-                        <h5 className="font-bold pb-3 mb-3 border-b-2 border-green-600 sm:border-none uppercase text-sm tracking-wider">Contact</h5>
+                        <h5 className="font-bold pb-3 mb-3 border-b-2 border-green-600 sm:border-none uppercase text-sm tracking-wider text-gray-900 dark:text-white">Contact</h5>
                         <div className="flex flex-col gap-3">
-                            <Link to="/contact" className="relative group w-fit text-sm font-medium text-gray-700 hover:text-green-700 transition-colors duration-300">
+                            <Link to="/contact" className="relative group w-fit text-sm font-medium text-gray-700 dark:text-gray-400 hover:text-green-700 dark:hover:text-green-400 transition-colors duration-300">
                                 Contact us
                                 <span className="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-green-600 transition-all duration-300 group-hover:w-full"></span>
                             </Link>
-                            <a href="tel:+8801730545451" className="relative group w-fit text-sm font-semibold tracking-wide text-gray-800 hover:text-green-700 transition-colors duration-300">
+                            <a href="tel:+8801730545451" className="relative group w-fit text-sm font-semibold tracking-wide text-gray-800 dark:text-gray-200 hover:text-green-700 transition-colors duration-300">
                                 +880 1730-545451
                                 <span className="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-green-600 transition-all duration-300 group-hover:w-full"></span>
                             </a>
@@ -92,7 +94,7 @@ const Footer = () => {
             </div>
 
             {/* Copyright Section */}
-            <div className="text-center py-6 text-xs text-gray-600">
+            <div className="text-center py-6 text-xs text-gray-600 dark:text-gray-500 border-t dark:border-white/10">
                 © {new Date().getFullYear()} JMR Land Survey. All rights reserved.
             </div>
         </footer>
