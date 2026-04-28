@@ -1,4 +1,4 @@
-import Contact from "../components/home/Contact"
+import Contact from "../components/shareComponents/Contact"
 import FAQ from "../components/home/Faq"
 import Gallery from "../components/home/Gallery"
 import Hero from "../components/home/HeroSection"
