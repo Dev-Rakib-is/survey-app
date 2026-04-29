@@ -1,5 +1,7 @@
 
 import { easeInOut, motion } from 'framer-motion';
+import Contact from '../components/shareComponents/Contact';
+import { Link } from 'react-router';
 
 const projectData = [
     {
@@ -30,14 +32,18 @@ const projectData = [
 
 const Projects = () => {
     return (
-        <section className="bg-black/5 my-10">
+        <section className=" py-10 bg-black/5">
             <div className="container mx-auto px-4">
+                {/* Hero  */}
+                <Link to="/contact" className="w-full mb-10">
+                    <img className='w-full h-48 md:h-96 object-cover' src="https://i.ibb.co.com/d0YsyMRD/image-3c2809c1.png/" alt=" Hero Image" />
+                </Link>
                 {/* Header  */}
                 <motion.header
                     initial={{ scale: 0.8, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.8, ease: easeInOut }}
-                    className="text-center py-3 ">
+                    className="text-center py-3">
                     <h2 className="text-4xl font-bold text-gray-900 dark:text-white">Featured Projects</h2>
                     <p className="text-gray-500 mt-3 dark:text-white">Some of my recent best works</p>
                 </motion.header>
@@ -53,11 +59,12 @@ const Projects = () => {
                             <img src={item.image} alt={item.title} className='rounded-lg h-80 w-full object-cover group-hover:blur-xs transition duration-300 ease-in-out' />
                             {/* Overlay  */}
                             <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 inset-0">
-                                <p  className='text-green-500 bg-black rounded-2xl p-0.5 text-2xl font-semibold absolute bottom-6 left-1/2 -translate-x-1/2 text-center'>{item.title}</p>
+                                <p className='text-green-500 bg-black rounded-2xl p-0.5 text-2xl font-semibold absolute bottom-6 left-1/2 -translate-x-1/2 text-center'>{item.title}</p>
                             </div>
                         </motion.div>
                     ))}
                 </div>
+                <Contact />
             </div>
         </section>
     )

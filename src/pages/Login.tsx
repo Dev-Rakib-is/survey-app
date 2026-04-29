@@ -1,7 +1,9 @@
 
 const Login = () => {
     return (
-        <div>Login</div>
+        <section className="bg-lener-to-r ">
+
+        </section>
     )
 }
 
