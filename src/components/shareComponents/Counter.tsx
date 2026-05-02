@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, animate} from "framer-motion";
+import { motion, animate } from "framer-motion";
 
 const counterData = [
     { number: 100, label: "PROJECTS" },

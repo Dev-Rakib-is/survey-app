@@ -5,9 +5,10 @@ import { Link } from "react-router";
 const Nav = () => {
     const navList = [
         { name: "Home", link: "/" },
+        { name: "Get a Quote", link: "/get-quote" }, 
+        { name: "Services", link: "/services" }, 
+        { name: "Projects", link: "/projects" }, 
         { name: "About", link: "/about" },
-        { name: "Services", link: "/services" },
-        { name: "Projects", link: "/projects" },
         { name: "Contact", link: "/contact" }
     ];
 

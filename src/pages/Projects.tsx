@@ -27,6 +27,12 @@ const projectData = [
         title: "GPS Measurement",
         image: "https://i.ibb.co.com/JRPwvL7Y/Gallery2.jpg",
         category: "i"
+    },
+    {
+        id: 5,
+        title: "Plot Layout",
+        image: "https://i.ibb.co.com/tp7vbFmJ/image-5.jpg",
+        category: "i"
     }
 ]
 

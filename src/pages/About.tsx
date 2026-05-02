@@ -1,5 +1,5 @@
 import AboutHero from "../components/about/AboutHero"
-import Counter from "../components/about/Stats"
+import Counter from "../components/shareComponents/Counter"
 import Contact from "../components/shareComponents/Contact"
 
 
