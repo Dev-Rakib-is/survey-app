@@ -14,7 +14,7 @@ const AboutHero = () => {
                     className="md:w-1/2"
                 >
                     <img
-                        src="https://i.ibb.co.com/WWkKJt61/Rana-vi.jpg"
+                        src="https://i.ibb.co.com/bR14QRph/About.jpg"
                         alt="Expert Surveyor"
                         className="rounded-3xl shadow-2xl border-8 border-slate-50 dark:border-slate-800"
                     />
