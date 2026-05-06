@@ -84,8 +84,8 @@ const Footer = () => {
                                 Contact us
                                 <span className="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-green-600 transition-all duration-300 group-hover:w-full"></span>
                             </Link>
-                            <a href="tel:+8801730545451" className="relative group w-fit text-sm font-semibold tracking-wide text-gray-800 dark:text-gray-200 hover:text-green-700 transition-colors duration-300">
-                                +880 1730-545451
+                            <a href="tel:+8801719326128" className="relative group w-fit text-sm font-semibold tracking-wide text-gray-800 dark:text-gray-200 hover:text-green-700 transition-colors duration-300">
+                                 +8801719 326 128 
                                 <span className="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-green-600 transition-all duration-300 group-hover:w-full"></span>
                             </a>
                         </div>
