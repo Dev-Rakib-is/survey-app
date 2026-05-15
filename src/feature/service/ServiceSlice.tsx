@@ -2,6 +2,8 @@ import axios from "axios";
 import api from "../../app/api";
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
+// api connect 
+
 export const fetchService = createAsyncThunk(
     "services/fetchServicesAll", async (_, { rejectWithValue }) => {
         try {
@@ -16,10 +18,17 @@ export const fetchService = createAsyncThunk(
     }
 )
 
+// service Slice 
 interface Service {
     id: number;
     name: string;
     description?: string;
+    category: string,
+    price: number,
+    duration: number,
+    iconName: string,
+    background: string
+
 }
 
 interface ServiceState {
@@ -46,7 +55,7 @@ const serviceSlice = createSlice({
             })
             .addCase(fetchService.fulfilled, (state, action) => {
                 state.isLoading = false;
-                state.data = action.payload
+                state.data = action.payload.data || action.payload;
             })
             .addCase(fetchService.rejected, (state, action) => {
                 state.isLoading = false;

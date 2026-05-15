@@ -1,13 +1,13 @@
-
-
 import { configureStore } from '@reduxjs/toolkit'
 import AuthReducer from "../feature/auth/AuthSlice"
-import { ServiceReducer } from '../feature/Service/servicesSlice'
+import ServiceReducer from '../feature/service/ServiceSlice'
+import BookingReducer from '../feature/booking/BookingSlice'
 
 export const store = configureStore({
     reducer: {
-        Auth: AuthReducer
-        Service:ServiceReducer
+        Auth: AuthReducer,
+        Service: ServiceReducer,
+        Booking: BookingReducer,
     }
 })
 

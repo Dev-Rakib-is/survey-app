@@ -37,9 +37,13 @@ const Hero = () => {
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1.1 }} className="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <button className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-green-600/20 active:scale-95 cursor-pointer">
+                        <a
+                            href="http://wa.me/880719326128/?text=Hello!%20I%20want%20a%20free%20property%20survey%20consultation."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-green-600/20 active:scale-95 cursor-pointer">
                             Free Consultation <ArrowRight size={20} />
-                        </button>
+                        </a>
 
                         <a href="tel:+8801719326128" className="flex items-center justify-center gap-2 border-2 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all active:scale-95">
                             <Phone size={20} className="text-green-600" /> Call Now
