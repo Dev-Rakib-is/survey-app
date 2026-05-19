@@ -2,7 +2,7 @@ import { BookOpenCheck, ChessPawn, Compass, HeartHandshake, LandPlot, Map, MapPi
 import { easeIn, motion } from 'framer-motion';
 import { useDispatch, useSelector } from "react-redux";
 import { fetchbooking, resetBookingState } from "../../feature/booking/BookingSlice";
-import type { RootState } from "../../app/store";
+import type { RootState, AppDispatch } from "../../app/store";
 import { useEffect } from "react";
 import Swal from 'sweetalert2';
 
@@ -100,7 +100,7 @@ const AllServices = [
 ];
 
 const Services = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const { user } = useSelector((state: RootState) => state.Auth);
   const { isLoading, success, error } = useSelector((state: RootState) => state.Booking);
 
@@ -114,7 +114,7 @@ const Services = () => {
         confirmButtonColor: '#22c55e'
       });
       dispatch(resetBookingState());
-    } else if (error) { 
+    } else if (error) {
       Swal.fire({
         title: "Booking Failed",
         text: typeof error === 'string' ? error : "Please try again",
@@ -138,7 +138,6 @@ const Services = () => {
       return;
     }
 
-  
     const bookingData = {
       userId: user.id,
       serviceID: serviceId.toString(),
@@ -147,8 +146,8 @@ const Services = () => {
       status: "pending"
     };
 
-   
-    dispatch(fetchbooking(bookingData) as unknown as any);
+
+    dispatch(fetchbooking(bookingData));
   };
 
   return (
@@ -177,7 +176,7 @@ const Services = () => {
               key={index}
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ delay: index * 0.3 }}
+              transition={{ delay: index * 0.2 }}
               className=" hover:shadow-2xl p-6 bg-white dark:bg-gray-700 rounded-3xl">
               <div className={`w-12 h-12 rounded flex items-center justify-center ${item.IconBackground} m-2`}>{item.icon}</div>
               <h3 className={`font-bold text-xl ${item.titleColor}`}>{item.title}</h3>
@@ -190,7 +189,7 @@ const Services = () => {
                   className={`font-bold cursor-pointer rounded bg-blue-50 p-2 ${item.butotnBg}`}> Details</motion.button>
                 <motion.button
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => handleBooking(item.id)} 
+                  onClick={() => handleBooking(item.id)}
                   className={`font-bold text-base rounded p-2 text-white cursor-pointer ${item.butotnBg}`}>{item.btnText}</motion.button>
               </div>
             </motion.div>
